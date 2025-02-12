@@ -1,14 +1,16 @@
 {
-    "manifest_version": 3,
-    "name": "Gerenciador de Extensões",
-    "version": "1.1",
-    "permissions": [
+  "manifest_version": 3,
+  "name": "Gerenciador de Extensões",
+  "version": "1.1",
+  "permissions": [
       "management",
       "tabs"
-    ],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    }
+  ],
+  "host_permissions": [
+      "http://*/*",
+      "https://*/*"
+  ],
+  "background": {
+      "service_worker": "background.js"
   }
-  
+}
